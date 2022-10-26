@@ -1,0 +1,48 @@
+<% include ../partials/header.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <h1><%= title %></h1>
+            <form class="form" method="post">
+              <div class="form-group">
+              <!-- Book title input -->
+                <label for="TitleTextField">Title</label>
+                <input type="text" class="form-control" id="TitleTextField"
+                placeholder="Book Name" name="Title" value="<%= books.Title %>" required>
+              </div>
+              <!-- Book description input -->
+              <div class="form-group">
+                <label for="DescriptionTextField">Description</label>
+                <input type="text" class="form-control" id="PriceTextField"
+                placeholder="Book Description" name="Description" value="<%= books.Description %>"  required>
+              </div>
+              <!-- Book price input -->
+              <div class="form-group">
+                <label for="PriceTextField">Price</label>
+                <input type="text" class="form-control" id="PriceTextField"
+                placeholder="Book Price" name="Price" value="<%= books.Price %>"  required>
+              </div>
+              <!-- Book author input -->
+              <div class="form-group">
+                <label for="AuthorTextField">Author</label>
+                <input type="text" class="form-control" id="AuthorTextField"
+                placeholder="Book Author" name="Author" value="<%= books.Author %>"  required>
+              </div>
+              <!-- Book genre input -->
+              <div class="form-group">
+                <label for="GenreTextField">Genre</label>
+                <input type="text" class="form-control" id="GenreTextField"
+                placeholder="Book Genre" name="Genre" value="<%= books.Genre %>"  required>
+              </div>
+
+              <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+              <!-- cancle button redirect to books page -->
+              <a href="/books" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+            </form>
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/footer.ejs %>
